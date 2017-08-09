@@ -19,20 +19,39 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="{{ url('ms') }}">Home</a></li>
-                <li><a href="{{ url('ms/course-archive') }}">Course</a></li>
-                <li><a href="{{ url('ms/scholarship') }}">Scholarship</a></li>
-                <li><a href="{{ url('ms/events-archive') }}">Events</a></li>
-                <li><a href="{{ url('ms/gallery') }}">Gallery</a></li>                
-                <li><a href="{{ url('ms/blog-archive') }}">Blog</a></li>
+                <li><a href="{{ url('ms/course-archive') }}">ABOUT US</a></li>
+                <li><a href="{{ url('ms/scholarship') }}">INFORMATION</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Page<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ADMISSION<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="{{ url('ms/404') }}">404 Page</a></li>
-                    <li><a href="#">Link Two</a></li>
-                    <li><a href="#">Link Three</a></li>               
+                    <li><a href="{{ url('ms/apply-now') }}">Apply Now</a></li>
+                    <li><a href="{{ url('ms/admission-result') }}">Admission Test Result</a></li>
+                    <li><a href="#">Fast Facts</a></li>               
+                    <li><a href="#">Fees & Paymenst</a></li>               
+                    <li><a href="#">Scholership</a></li>               
+                    <li><a href="#">Transfer Procedure</a></li>               
                   </ul>
-                </li>               
-                <li><a href="{{ url('ms/contact') }}">Contact</a></li>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ACADEMIC<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{ url('ms/apply-now') }}">Code Of Conducts</a></li>
+                    <li><a href="{{ url('ms/admission-result') }}">Guidline for parents</a></li>
+                    <li><a href="{{ url('ms/apply-now') }}">Dress Code</a></li>               
+                    <li><a href="{{ url('ms/apply-now') }}">Lession Plan</a></li>               
+                    <li><a href="{{ url('ms/academic-calander') }}">Academic Calander</a></li>               
+                    <li><a href="{{ url('ms/apply-now') }}">Book list & Syllabus</a></li>               
+                    <li><a href="{{ url('ms/apply-now') }}">Class Routine</a></li>               
+                    <li><a href="{{ url('ms/apply-now') }}">Exam schedule</a></li>               
+                    <li><a href="{{ url('ms/apply-now') }}">Results</a></li>               
+                    <li><a href="{{ url('ms/co-curriculer') }}">Co-curricular Activities</a></li>               
+                  </ul>
+                </li>
+                <li><a href="{{ url('ms/gallery') }}">DOWNLOADS</a></li>                
+                <li><a href="{{ url('ms/gallery') }}">ARCHIVES</a></li>                
+                <li><a href="{{ url('ms/blog-archive') }}">BLOG</a></li>
+                               
+                <li><a href="{{ url('ms/contact') }}">CONTACT</a></li>
               </ul>           
             </div><!--/.nav-collapse -->
           </div>     

@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/ms', 'PagesController@getIndex');
+Route::get('/ms/apply-now', 'PagesController@getApply');
+Route::get('/ms/admission-result', 'PagesController@getAdmissionResult');
+Route::get('/ms/co-curriculer', 'PagesController@getCoCurriculer');
+Route::get('/ms/academic-calander', 'PagesController@getAcademicCalander');
 Route::get('/ms/gallery', 'PagesController@getGallery');
 Route::get('/ms/scholarship', 'PagesController@getScholarship');
 Route::get('/ms/events-archive', 'PagesController@getEventsArchive');

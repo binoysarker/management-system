@@ -34,13 +34,16 @@
     <!-- smooth animate css file -->
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}"> 
     <!-- preloader -->
-    <link rel="stylesheet" href="{{ asset('css/queryLoader.css') }}" type="text/css" />
     <!-- gallery slider css -->
     <link type="text/css" media="all" rel="stylesheet" href="{{ asset('css/jquery.tosrus.all.css') }}" />    
     <!-- Default Theme css file -->
     <link id="switcher" href="{{ asset('css/themes/green-theme.css') }}" rel="stylesheet">
     <!-- Main structure css file -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    {{-- clanander css --}}
+    <link rel='stylesheet' href='{{ asset('css/themes/green-theme.css') }}' />
+    <link rel="stylesheet" media="print" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.print.css"/>
    
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
@@ -99,7 +102,11 @@
     <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
     <!-- Gallery slider -->
     <script type="text/javascript" language="javascript" src="{{ asset('js/jquery.tosrus.min.all.js') }}"></script>   
-   
+
+    <script src='{{ asset('css/jquery.min.js') }}'></script>
+    <script src='{{ asset('css/moment.min.js') }}'></script>
+    <script src='{{ asset('js/fullcalendar.js') }}'></script>
+
     <!-- Custom js-->
     <script src="{{ asset('js/custom.js') }}"></script>
     <!--=============================================== 

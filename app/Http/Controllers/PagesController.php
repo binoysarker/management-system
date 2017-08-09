@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Students_result;
+use App\EventModel;
+
 
 class PagesController extends Controller
 {
@@ -12,7 +15,26 @@ class PagesController extends Controller
     }
     public function getGallery()
     {
-    	return view('ms.gallery');
+        return view('ms.gallery');
+    }
+    public function getApply()
+    {
+        return view('ms.apply-now');
+    }
+    public function getAdmissionResult()
+    {
+        $results = Students_result::all();
+        return view('ms.admission-result',compact('results'));
+    }
+    public function getAcademicCalander()
+    {
+        
+        
+        return view('ms.academic-calander');
+    }
+    public function getCoCurriculer()
+    {
+    	return view('ms.co-curriculer');
     }
     public function getScholarship()
     {
