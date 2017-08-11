@@ -11,7 +11,7 @@
               </button>
               <!-- LOGO -->
               <!-- TEXT BASED LOGO -->
-              <a class="navbar-brand" href="index.html">WpF <span>Degree</span></a>              
+              <a class="navbar-brand" href="index.html"><img src="{{ url('img/logo(small).png') }}" class="img-circle" alt=""></a>              
               <!-- IMG BASED LOGO  -->
                <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
                      

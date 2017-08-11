@@ -34,7 +34,11 @@ class PagesController extends Controller
     }
     public function getCoCurriculer()
     {
-    	return view('ms.co-curriculer');
+        return view('ms.co-curriculer');
+    }
+    public function getClassRoutine()
+    {
+    	return view('ms.class-routine');
     }
     public function getScholarship()
     {

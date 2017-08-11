@@ -39,7 +39,7 @@
                       </a>
                     </div>
                     <div class="media-body">
-                     <a href="#">Dummy text of the printing and typesetting industry</a>
+                     <a href="{{ url('ms/exam-routine') }}">বার্ষিক পরীক্ষার রুটিন</a>
                      <span class="feed_date">27.02.15</span>
                     </div>
                   </div>                    

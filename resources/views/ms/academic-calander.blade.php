@@ -19,12 +19,31 @@
        <div class="col-lg-8 col-md-8 col-sm-8">
         
         {{-- calander need to be included --}}
-        
+
+        <form action="{{ url('ms/calanderEvent') }}" class="col-lg-8" method="get" accept-charset="utf-8">
+          <legend><strong>Academic Calander </strong></legend>
+          <input type="datetime-local" class="form-control" name="date" value="" placeholder="insert the date">
+          <br>
+          <input type="text" class="form-control" name="datetopic" value="" placeholder="insert the topic">
+          <br>
+          <textarea name="datedescription" class="form-control" rows="5" placeholder="Description"></textarea>
+          <br>
+          <input type="submit" class="btn btn-primary" name="submit" value="Submit">
+        </form>
 
        </div>
        <div class="col-lg-4 col-md-4 col-sm-4">
          <div class="contact_address wow fadeInRight">
            
+           <div class="single_sidebar">
+             <h2>Recent Events <span class="fa fa-angle-double-right"></span></h2>
+             <ul>
+               <li><a href="#"><strong>Date</strong> and Events</a></li>
+               <li><a href="#"><strong>Date</strong> and Events</a></li>
+               <li><a href="#"><strong>Date</strong> and Events</a></li>
+             </ul>
+           </div>
+
            <div class="single_sidebar">
              <h2>Quick Links <span class="fa fa-angle-double-right"></span></h2>
              <ul>

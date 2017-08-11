@@ -14,11 +14,11 @@ class CreateStudentsResultsTable extends Migration
     public function up()
     {
         Schema::create('students_results', function (Blueprint $table) {
-            $table->increments('studnet_id');
-            $table->string('studnet_name');
-            $table->integer('studnet_class');
-            $table->integer('studnet_roll');
-            $table->string('studnet_result');
+            $table->increments('student_id');
+            $table->string('student_name');
+            $table->integer('student_class');
+            $table->integer('student_roll');
+            $table->string('student_result');
             $table->timestamps();
         });
     }

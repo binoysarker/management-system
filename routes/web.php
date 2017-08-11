@@ -17,6 +17,7 @@ Route::get('/', function () {
 Route::get('/ms', 'PagesController@getIndex');
 Route::get('/ms/apply-now', 'PagesController@getApply');
 Route::get('/ms/admission-result', 'PagesController@getAdmissionResult');
+Route::get('/ms/exam-routine', 'PagesController@getClassRoutine');
 Route::get('/ms/co-curriculer', 'PagesController@getCoCurriculer');
 Route::get('/ms/academic-calander', 'PagesController@getAcademicCalander');
 Route::get('/ms/gallery', 'PagesController@getGallery');
