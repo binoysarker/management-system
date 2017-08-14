@@ -26,15 +26,21 @@
      <div class="row">
        <div class="col-lg-8 col-md-8 col-sm-8">
          <div class="contact_form wow fadeInLeft">
-            <form class="submitphoto_form">
-              <input type="text" class="wp-form-control wpcf7-text" placeholder="Your name">
-              <input type="text" class="wp-form-control wpcf7-text" placeholder="Father name">
-              <input type="text" class="wp-form-control wpcf7-text" placeholder="Mother name">
-              <input type="number" class="wp-form-control wpcf7-text" placeholder="Mobile name">
-              <input type="mail" class="wp-form-control wpcf7-email" placeholder="Email address">          
-              <input type="text" class="wp-form-control wpcf7-text" placeholder="Subject">
-              <textarea class="wp-form-control wpcf7-textarea" cols="30" rows="10" placeholder="Your home address"></textarea>
-              <input type="submit" value="Apply Now" class="wpcf7-submit">
+            
+
+            <form class="submitphoto_form" action="{{ url('/ms/apply-now') }}" method="POST" enctype="multipart/form-data">
+              {{csrf_field()}}
+              <input type="text" class="wp-form-control wpcf7-text" name="student_name" placeholder="Your name">
+              <input type="text" class="wp-form-control wpcf7-text" name="student_fatherName" placeholder="Father name">
+              <input type="text" class="wp-form-control wpcf7-text" name="student_motherName" placeholder="Mother name">
+              <input type="number" class="wp-form-control wpcf7-text" name="student_mobileNumber" placeholder="Mobile name">
+              <input type="mail" class="wp-form-control wpcf7-email" name="student_email" placeholder="Email address">          
+              <input type="text" class="wp-form-control wpcf7-text" name="student_subject" placeholder="Subject">
+              <label for="#myfile">Insert your image</label>
+              <input type="file" name="profile" id="myfile" value="Upload">
+              <br>
+              <textarea class="wp-form-control wpcf7-textarea" cols="30" name="student_address" rows="10" placeholder="Your home address"></textarea>
+              <input type="submit" name="submit" value="Apply Now" class="wpcf7-submit">
             </form>
          </div>
        </div>

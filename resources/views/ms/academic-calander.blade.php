@@ -24,9 +24,9 @@
           <legend><strong>Academic Calander </strong></legend>
           <input type="datetime-local" class="form-control" name="date" value="" placeholder="insert the date">
           <br>
-          <input type="text" class="form-control" name="datetopic" value="" placeholder="insert the topic">
+          <input type="text" class="form-control" name="date_topic" value="" placeholder="insert the topic">
           <br>
-          <textarea name="datedescription" class="form-control" rows="5" placeholder="Description"></textarea>
+          <textarea name="date_description" class="form-control" rows="5" placeholder="Description"></textarea>
           <br>
           <input type="submit" class="btn btn-primary" name="submit" value="Submit">
         </form>

@@ -92,7 +92,7 @@ img{
   position:absolute;
   left:50%; /* centers the loading animation horizontally one the screen */
   top:50%; /* centers the loading animation vertically one the screen */
-  background-image:url(/img/status.GIF); /* path to your loading animation */
+  background-image:url("/img/status.GIF"); /* path to your loading animation */
   background-repeat:no-repeat;
   background-position:center;
   margin:-100px 0 0 -100px; /* is width and height divided by two */
@@ -1743,6 +1743,7 @@ div[data-dimension] {
 
 
 @media(max-width:1199px ){
+  .navbar-brand img {opacity: 0.5;}
   .slider_caption {width: 60%;}
   .slider_caption h2 {font-size: 30px;}
   .slider_right_caption {left: 35%;}
@@ -1753,6 +1754,7 @@ div[data-dimension] {
 }
   
 @media(max-width:991px ){
+  .navbar-brand img {display: block;}
   .navbar-default .navbar-brand {font-size: 18px;}
   .navbar-default .navbar-nav > li > a {font-size: 12px;padding: 30px 9px;}
   .navbar-nav > li > .dropdown-menu li a {font-size: 12px;}
@@ -1774,6 +1776,7 @@ div[data-dimension] {
 
 
 @media(max-width:767px ){
+.navbar-brand img {}
 .navbar-default .navbar-nav > li > a {padding: 10px 20px;}
 .navbar-nav > li > .dropdown-menu {left: 15px;}	
 .navbar-nav > li > .dropdown-menu:before {border-left: 10px solid transparent;border-right: 10px solid transparent;right: 65%;}

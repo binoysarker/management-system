@@ -15,7 +15,9 @@ class CreateAcademicCalandersTable extends Migration
     {
         Schema::create('academic_calanders', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('id');
+            $table->dateTime('date');
+            $table->string('date_topic');
+            $table->text('date_description');
             $table->timestamps();
         });
     }

@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/ms', 'PagesController@getIndex');
-Route::get('/ms/apply-now', 'PagesController@getApply');
+Route::get('/ms/student-profile', 'ApplicationController@index');
+Route::get('/ms/apply-now', 'ApplicationController@create');
+Route::post('/ms/apply-now', 'ApplicationController@store');
 Route::get('/ms/admission-result', 'PagesController@getAdmissionResult');
 Route::get('/ms/exam-routine', 'PagesController@getClassRoutine');
 Route::get('/ms/co-curriculer', 'PagesController@getCoCurriculer');
@@ -31,3 +33,7 @@ Route::get('/ms/blog-single', 'PagesController@getBlogSingle');
 
 Route::get('/ms/contact', 'PagesController@getContact');
 Route::get('/ms/404', 'PagesController@get404');
+
+
+Route::post('/ms/fileupload', 'PagesController@storefile');
+Route::get('/ms/fileupload', 'PagesController@getfile');

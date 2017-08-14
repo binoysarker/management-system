@@ -76,4 +76,7 @@ class PagesController extends Controller
     {
     	return view('ms.404');
     }
+
+
+    
 }
