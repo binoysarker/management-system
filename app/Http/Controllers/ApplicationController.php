@@ -17,7 +17,8 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        return view('ms.student-profile');
+        $studentprofile = StudentProfile::all();
+        return view('student-profile.index',compact('studentprofile'));
     }
 
     /**
@@ -27,7 +28,7 @@ class ApplicationController extends Controller
      */
     public function create()
     {
-        return view('ms.apply-now');
+        return view('student-profile.create');
     }
 
     /**
@@ -51,26 +52,22 @@ class ApplicationController extends Controller
 
 
         $studentprofile->profile = $request->file('profile')->getClientOriginalName();
-        /*$filepath = $request->profile->path();
-        $fileextension = $request->profile->extension();*/
         
         if ($request->hasFile('profile')) {
-            $request->profile->storeAs('public/upload', $request->file('profile')->getClientOriginalName());
-            // return Storage::put('public/upload', $studentprofile->profile);
+            $request->profile->storeAs('public',$request->profile->getClientOriginalName());
             
+            
+            // saving in the database
+            $studentprofile->save();
+            session()->flash('message','Data Uploaded Successfuly');
+            $url = Storage::url("".$request->profile->getClientOriginalName());
+            // $getFile = Storage::copy($url, '/'.$request->profile->getClientOriginalName());
+            return view('student-profile.show',compact('url','studentprofile'));
         }
         else
         {
-            return 'No file selected';
+            return '<h1>No file selected</h1>';
         }
-
-        // saving in the database
-        $studentprofile->save();
-        session()->flash('message','Data Uploaded Successfuly');
-        return redirect('ms/student-profile');
-        
-
-
         
     }
 
@@ -82,7 +79,14 @@ class ApplicationController extends Controller
      */
     public function show($id)
     {
-        //
+        
+        
+        $studentprofile = StudentProfile::find($id);
+
+        return view('student-profile.show',compact('studentprofile'));
+        
+        
+
     }
 
     /**
@@ -93,7 +97,8 @@ class ApplicationController extends Controller
      */
     public function edit($id)
     {
-        //
+        $studentprofile = StudentProfile::findORFail($id);
+        return view('student-profile.edit',compact('studentprofile'));
     }
 
     /**
@@ -105,7 +110,11 @@ class ApplicationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $studentprofile = StudentProfile::findORFail($id);
+        $studentprofile->update(request(['student_name','student_fatherName','student_motherName','student_mobileNumber','student_email','student_subject','student_address']));
+        session()->flash('message','Student Data is updated');
+        return view('student-profile.show',compact('studentprofile'));
+
     }
 
     /**
@@ -116,6 +125,8 @@ class ApplicationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        StudentProfile::destroy($id);
+        session()->flash('message','Student data is deleted');
+        return redirect('/ms/student-profile');
     }
 }

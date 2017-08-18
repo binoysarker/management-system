@@ -14,10 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/ms', 'PagesController@getIndex');
-Route::get('/ms/student-profile', 'ApplicationController@index');
+// application controller section
+
+/*Route::get('/ms/student-profile', 'ApplicationController@index');
 Route::get('/ms/apply-now', 'ApplicationController@create');
-Route::post('/ms/apply-now', 'ApplicationController@store');
+Route::post('/ms/apply-now', 'ApplicationController@store');*/
+
+// pages controller section
+
+Route::get('/ms', 'PagesController@getIndex');
 Route::get('/ms/admission-result', 'PagesController@getAdmissionResult');
 Route::get('/ms/exam-routine', 'PagesController@getClassRoutine');
 Route::get('/ms/co-curriculer', 'PagesController@getCoCurriculer');
@@ -35,5 +40,16 @@ Route::get('/ms/contact', 'PagesController@getContact');
 Route::get('/ms/404', 'PagesController@get404');
 
 
-Route::post('/ms/fileupload', 'PagesController@storefile');
-Route::get('/ms/fileupload', 'PagesController@getfile');
+/*
+student admission section
+*/
+
+Route::resource('/ms/admission', 'AdmissionResultController');
+
+
+/*
+Student profile section
+*/
+Route::resource('/ms/student-profile', 'ApplicationController');
+
+

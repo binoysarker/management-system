@@ -24,8 +24,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">ADMISSION<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="{{ url('ms/apply-now') }}">Apply Now</a></li>
-                    <li><a href="{{ url('ms/admission-result') }}">Admission Test Result</a></li>
+                    <li><a href="{{ url('/ms/student-profile') }}">Student Profile</a></li>
+                    <li><a href="{{ url('ms/student-profile/create') }}">Apply Now</a></li>
+                    <li><a href="{{ url('ms/admission') }}">Admission Test Result</a></li>
                     <li><a href="#">Fast Facts</a></li>               
                     <li><a href="#">Fees & Paymenst</a></li>               
                     <li><a href="#">Scholership</a></li>               
